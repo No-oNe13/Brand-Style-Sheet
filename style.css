@@ -1,0 +1,357 @@
+* {
+  margin: 0em;
+  padding: 0em;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100%;
+}
+
+header {
+  background-color: rgba(122, 30, 134, 0.8);
+  align-items: center;
+  padding-bottom: 1.2em;
+}
+
+/*RESPONSIVE NAV BAR*/
+
+.menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  padding-top: 1em;
+  min-height: 8vh;
+  font-family: "Asap", sans-serif;
+  background-color: rgb(122, 30, 134);
+}
+
+.logoTxt {
+  color: rgb(241, 239, 241);
+  letter-spacing: 0.05em;
+  font-size: 2em;
+  justify-content: space-around;
+  width: 30%;
+}
+
+.links {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
+
+.links li {
+  list-style: none;
+}
+
+.links a {
+  color: rgb(241, 239, 241);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  font-weight: bold;
+  font-size: 1em;
+  height: 1em;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 1.5em;
+  height: 0.11em;
+  background-color: rgb(241, 239, 241);
+  margin: 5px; /*to be changed*/
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1024px) {
+  .links {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  .links {
+    position: absolute;
+    right: 0em;
+    height: 100vh;
+    top: 8vh;
+    background-color: rgb(122, 30, 134);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%; /* to be changed*/
+    transform: translateX(100%);
+    transition: tranform 0.5s ease-in;
+  }
+  .links li {
+    opacity: 1;
+  }
+  .burger {
+    display: block;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5, -6px);
+}
+
+/* MAIN PAGE*/
+
+.logo {
+  display: flex;
+  justify-content: space-around;
+  font-family: "Asap", sans-serif;
+  font-size: 2em;
+  margin-top: 1em;
+  margin: 3em auto;
+}
+
+.colorNames {
+  display: grid;
+  display: flex;
+  justify-content: space-around;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 3px;
+  margin-bottom: 1.5em;
+}
+
+.p-purple {
+  border-radius: 50%;
+  border: 2px solid black;
+  height: 5em;
+  width: 5em;
+  align-items: center;
+  display: flex;
+  font-size: 1.5em;
+  font-family: "Asap", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  background-color: rgb(122, 30, 134);
+}
+
+.p-grey {
+  border-radius: 50%;
+  border: 2px solid black;
+  height: 5em;
+  width: 5em;
+  align-items: center;
+  display: flex;
+  font-size: 1.5em;
+  font-family: "Asap", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  background-color: rgb(88, 87, 97);
+}
+
+.p-black {
+  border-radius: 50%;
+  border: 2px solid black;
+  height: 5em;
+  width: 5em;
+  align-items: center;
+  display: flex;
+  font-size: 1.5em;
+  font-family: "Asap", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+.colors {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 15.7em;
+  grid-template-rows: 10px;
+  column-gap: 3px;
+  margin: 2px auto;
+  border-radius: 3em;
+  border: 1px, solid white;
+}
+
+.colors-purple li {
+  /*background-color: rgb(122, 30, 134);*/
+  color: rgb(122, 30, 134);
+  font-family: "Lexend Exa", sans-serif;
+  font-size: 17px;
+  letter-spacing: 0.1em;
+  padding-left: 15px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  list-style: none;
+  border: 0.07em solid rgb(122, 30, 134);
+}
+
+.h3-colors-purple {
+  background-color: rgb(122, 30, 134);
+  color: rgb(241, 239, 243);
+  font-family: "Lexend Exa", sans-serif;
+  letter-spacing: 0.05em;
+  font-weight: bolder;
+  padding-left: 15px;
+  text-align: center;
+}
+
+.colors-grey li {
+  /*background-color: rgb(88, 87, 97);*/
+  color: rgb(88, 87, 97);
+  font-family: "Lexend Exa", sans-serif;
+  letter-spacing: 0.05em;
+  font-weight: lighter;
+  font-size: 17px;
+  letter-spacing: 0.1em;
+  padding-left: 15px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  list-style: none;
+  border: 0.07em solid rgb(88, 87, 97);
+}
+
+.h3-colors-grey {
+  background-color: rgb(88, 87, 97);
+  color: rgb(233, 231, 247);
+  font-family: "Lexend Exa", sans-serif;
+  letter-spacing: 0.05em;
+  font-weight: bolder;
+  padding-left: 15px;
+  text-align: center;
+}
+
+.colors-black li {
+  /*background-color: rgb(0, 0, 0);*/
+  color: rgb(0, 0, 0);
+  font-family: "Lexend Exa", sans-serif;
+  letter-spacing: 0.05em;
+  font-weight: lighter;
+  font-size: 17px;
+  letter-spacing: 0.1em;
+  padding-left: 15px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  list-style: none;
+  border: 0.07em solid rgb(0, 0, 0);
+}
+
+.h3-colors-black {
+  background-color: rgb(0, 0, 0);
+  color: rgb(250, 249, 252);
+  font-family: "Lexend Exa", sans-serif;
+  letter-spacing: 0.05em;
+  font-weight: bolder;
+  padding-left: 15px;
+  text-align: center;
+}
+
+.fonts {
+  display: grid;
+  display: flex;
+  grid-template-columns: 1fr 1fr;
+  height: auto;
+}
+
+.fonts-column1 {
+  /*background-color: rgb(246, 246, 248);*/
+  background: linear-gradient(
+    350deg,
+    rgba(246, 246, 248),
+    rgb(65, 65, 66) 95.71%
+  );
+  border-radius: 1em;
+  font-family: "Asap", sans-serif;
+  margin-left: 1em;
+  padding: 1em;
+}
+
+p {
+  text-decoration: underline;
+  font-size: 3em;
+  font-weight: 700;
+}
+
+.fonts-h1 {
+  font-size: 2em;
+  margin: 1em auto;
+}
+
+.fonts-h2 {
+  font-size: 1.7em;
+  margin: 1em auto;
+}
+
+.fonts-h3 {
+  font-size: 1.3em;
+  margin: 1em auto;
+}
+
+.fonts-h4 {
+  font-size: 0.9em;
+  margin: 1em auto;
+}
+
+.fonts-column2 {
+  /*background-color: darkslategrey;*/
+  background: linear-gradient(
+    10deg,
+    rgba(246, 246, 248),
+    rgb(65, 65, 66) 95.71%
+  );
+  border-radius: 1em;
+  font-family: "Asap", sans-serif;
+  margin-left: 1em;
+  padding: 1em;
+  font-family: "Lexend Exa", sans-serif;
+}
+
+.sec-fonts-h1 {
+  font-size: 2em;
+  margin: 1em auto;
+}
+
+.sec-fonts-h2 {
+  font-weight: bold;
+  font-size: 1.7em;
+}
+
+.sec-font-p1 {
+  text-decoration: underline;
+  font-size: 1.2em;
+  padding-top: 1em;
+}
+
+/* Footer */
+
+footer {
+  display: grid;
+  display: flex;
+  grid-template-columns: 1fr 1fr;
+  height: 15em;
+}
