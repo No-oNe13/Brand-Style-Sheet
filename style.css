@@ -353,5 +353,27 @@ footer {
   display: grid;
   display: flex;
   grid-template-columns: 1fr 1fr;
-  height: 15em;
+  height: 5em;
+  gap: 3px;
+  background-color: rgb(122, 30, 134);
+  padding-left: 1em;
+}
+
+.name1-a,
+.name2-a,
+.name3-a {
+  font-family: "Lexend Exa", sans-serif;
+  font-size: 1em;
+  color: rgba(246, 246, 248);
+  padding: 10px auto;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  font-weight: bold;
+  list-style: none;
+}
+
+.name1,
+.name2,
+.name3 {
+  list-style: none;
 }
